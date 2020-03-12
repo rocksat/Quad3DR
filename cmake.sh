@@ -39,11 +39,8 @@ cmake \
     -DBUILD_QUAD_PLANNER=OFF \
     -DBUILD_VIDEO=OFF \
     -DEIGEN3_INCLUDE_DIR=/usr/include/eigen3 \
-    -DBOOST_ROOT=/usr/include/boost \
-    -Doctomap_DIR=$HOME/Projects/Libraries/octomap/lib/cmake/octomap \
-    -Doctovis_DIR=$HOME/Projects/Libraries/octomap/lib/cmake/octovis \
-    -DCMAKE_PREFIX_PATH=$HOME/Projects/Libraries/ompl \
-    -DOMPL_PREFIX=$HOME/Projects/Libraries/ompl \
+    -Doctomap_DIR=/task_runtime/octomap/lib/cmake/octomap \
+    -Doctovis_DIR=/task_runtime/octomap/lib/cmake/octovis \
     $CMAKE_SOURCE_DIR \
     $@
 
