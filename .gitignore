@@ -1,6 +1,8 @@
+build/
 images/
 workspace/
 catkin_ws/
+external/googletest-1.8.0/
 #catkin_ws/.catkin_tools/
 #catkin_ws/build/
 #catkin_ws/devel/
