@@ -10,7 +10,7 @@
 #include "eigen.h"
 
 namespace boost {
-//namespace serialization {
+  namespace serialization {
 
 // TODO: These don't work
 //  template<typename Archive, typename Derived>
@@ -49,39 +49,38 @@ namespace boost {
 //    ar & boost::serialization::make_array(quat.coeffs().data(), quat.coeffs().size());
 //  }
 
-  template<typename Archive>
-  inline void serialize(
-      Archive& ar,
-      Eigen::Quaternion<float>& quat,
-      const unsigned int version
-  ) {
-    ar & boost::serialization::make_array(quat.coeffs().data(), quat.coeffs().size());
-  }
+    template<typename Archive>
+    inline void serialize(
+        Archive& ar,
+        Eigen::Quaternion<float>& quat,
+        const unsigned int version
+    ) {
+      ar & boost::serialization::make_array(quat.coeffs().data(), quat.coeffs().size());
+    }
 
-  template<typename Archive>
-  inline void serialize(
-      Archive& ar,
-      const Eigen::Quaternion<float>& quat,
-      const unsigned int version
-  ) {
-    ar & boost::serialization::make_array(quat.coeffs().data(), quat.coeffs().size());
-  }
+    template<typename Archive>
+    inline void serialize(
+        Archive& ar,
+        const Eigen::Quaternion<float>& quat,
+        const unsigned int version
+    ) {
+      ar & boost::serialization::make_array(quat.coeffs().data(), quat.coeffs().size());
+    }
 
-  template<class Archive, typename _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols>
-  inline void serialize(
-      Archive & ar,
-      Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& matrix,
-      const unsigned int file_version) {
-    ar & boost::serialization::make_array(matrix.data(), matrix.size());
-  }
+    template<class Archive, typename _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols>
+    inline void serialize(
+        Archive & ar,
+        Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& matrix,
+        const unsigned int file_version) {
+      ar & boost::serialization::make_array(matrix.data(), matrix.size());
+    }
 
-  template<class Archive, typename _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols>
-  inline void serialize(
-      Archive & ar,
-      const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& matrix,
-      const unsigned int file_version) {
-    ar & boost::serialization::make_array(matrix.data(), matrix.size());
+    template<class Archive, typename _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols>
+    inline void serialize(
+        Archive & ar,
+        const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& matrix,
+        const unsigned int file_version) {
+      ar & boost::serialization::make_array(matrix.data(), matrix.size());
+    }
   }
-
-//}
 }
