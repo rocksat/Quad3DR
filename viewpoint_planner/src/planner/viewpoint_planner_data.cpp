@@ -964,7 +964,7 @@ void ViewpointPlannerData::generateDistanceField() {
       }
     }
   }
-  distance_field_ = DistanceFieldType(seed_grid);
+  distance_field_ = DistanceFieldType(seed_grid.getDimX(), seed_grid.getDimY(), seed_grid.getDimZ());
   for (int ix = 0; ix < grid_dim_(0); ++ix) {
     for (int iy = 0; iy < grid_dim_(1); ++iy) {
       for (int iz = 0; iz < grid_dim_(2); ++iz) {

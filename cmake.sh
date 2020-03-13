@@ -38,9 +38,7 @@ cmake \
     -DBUILD_STEREO=OFF \
     -DBUILD_QUAD_PLANNER=OFF \
     -DBUILD_VIDEO=OFF \
-    -DEIGEN3_INCLUDE_DIR=/usr/include/eigen3 \
-    -Doctomap_DIR=/task_runtime/octomap/lib/cmake/octomap \
-    -Doctovis_DIR=/task_runtime/octomap/lib/cmake/octovis \
+    -DEIGEN3_INCLUDE_DIR=/usr/local/include/eigen3 \
     $CMAKE_SOURCE_DIR \
     $@
 
