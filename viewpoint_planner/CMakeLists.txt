@@ -81,7 +81,7 @@ include_directories(
     ${OpenCV_INCLUDE_DIRS}
     ${EIGEN3_INCLUDE_DIR}
     ${OMPL_INCLUDE_DIRS}
-    ${SQLITE3_INCLUDE_DIRS}
+    ${SQLite3_INCLUDE_DIRS}
 )
 
 add_executable(occupancy_map_from_sens
@@ -256,7 +256,7 @@ target_link_libraries(image_matcher
 target_link_libraries(image_matcher
     ${Boost_LIBRARIES}
     ${OpenCV_LIBRARIES}
-    ${SQLITE3_LIBRARIES}
+    ${SQLite3_LIBRARIES}
 )
 
 add_executable(image_matcher_test WIN32
@@ -282,7 +282,7 @@ target_link_libraries(image_matcher_test
 target_link_libraries(image_matcher_test
     ${Boost_LIBRARIES}
     ${OpenCV_LIBRARIES}
-    ${SQLITE3_LIBRARIES}
+    ${SQLite3_LIBRARIES}
 )
 
 add_executable(image_match_invalidator WIN32
@@ -300,7 +300,7 @@ target_link_libraries(image_match_invalidator
 target_link_libraries(image_match_invalidator
     ${Boost_LIBRARIES}
     ${OpenCV_LIBRARIES}
-    ${SQLITE3_LIBRARIES}
+    ${SQLite3_LIBRARIES}
 )
 
 set(VIEWPOINT_PLANNER_SOURCES_COMMON
