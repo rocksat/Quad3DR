@@ -512,7 +512,6 @@ target_link_libraries(viewpoint_planner_gui
     ${Boost_LIBRARIES}
     ${OpenCV_LIBRARIES}
     ${OPENGL_LIBRARIES}
-    ${GPERFTOOLS_LIBRARIES}
 )
 target_link_libraries(viewpoint_planner_gui Qt5::Core Qt5::Xml Qt5::Gui Qt5::OpenGL Qt5::WebSockets)
 #target_link_libraries(viewpoint_planner_gui /home/bhepp/Projects/Libraries/libQGLViewer-2.6.4/lib/libQGLViewer-qt5.so)
