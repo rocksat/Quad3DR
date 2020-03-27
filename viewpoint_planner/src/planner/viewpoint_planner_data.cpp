@@ -503,7 +503,7 @@ void ViewpointPlannerData::updateWeightsWithRealViewpoints() {
     for (const auto& entry : reconstruction_->getImages()) {
       const reconstruction::PinholeCamera &real_camera = reconstruction_->getCameras().at(entry.second.camera_id());
       const reconstruction::DenseReconstruction::DepthMap& depth_map = reconstruction_->readDepthMap(
-              entry.second.id(), reconstruction::DenseReconstruction::DenseMapType::GEOMETRIC_FUSED);
+              entry.second.id(), reconstruction::DenseReconstruction::DenseMapType::GEOMETRIC);
       const FloatType depth_camera_scale_factor = depth_map.width() / FloatType(real_camera.width());
       const reconstruction::PinholeCamera depth_camera = real_camera.getScaledCamera(depth_camera_scale_factor);
       if (!offscreen_renderer) {

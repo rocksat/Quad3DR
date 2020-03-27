@@ -157,7 +157,7 @@ int main(int argc, char** argv) {
          << " (image ID " << image_id << ")" << endl;
 
     DenseReconstruction::DepthMap depth_map =
-        reconstruction.readDepthMap(image_id, DenseReconstruction::DenseMapType::GEOMETRIC_FUSED);
+        reconstruction.readDepthMap(image_id, DenseReconstruction::DenseMapType::GEOMETRIC);
 
     // Show depth maps for debugging
     if (!vm["no-display"].as<bool>()) {
