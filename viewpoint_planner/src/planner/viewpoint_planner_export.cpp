@@ -18,7 +18,7 @@
 rapidjson::Document ViewpointPlanner::getViewpointPathAsJson(const ViewpointPath& viewpoint_path) const {
   std::cout << "Converting viewpoint path to JSON" << std::endl;
   BH_ASSERT(hasReconstruction());
-  BH_ASSERT(hasGpsTransformation());
+  // BH_ASSERT(hasGpsTransformation());
 
   using GpsCoordinateType = reconstruction::SfmToGpsTransformation::GpsCoordinate;
   using GpsFloatType = typename GpsCoordinateType::FloatType;
