@@ -207,8 +207,8 @@ public:
     FloatType viewpoint_recording_time = FloatType(10.0);
 
     // Drone bounding box
-    Vector3 drone_bbox_min = Vector3(-10, -10, -10);
-    Vector3 drone_bbox_max = Vector3(10, 10, 10);
+    Vector3 drone_bbox_min = Vector3(-0.1, -0.1, -0.1);
+    Vector3 drone_bbox_max = Vector3(0.1, 0.1, 0.1);
 
     // Viewpoint sampling parameters
 
