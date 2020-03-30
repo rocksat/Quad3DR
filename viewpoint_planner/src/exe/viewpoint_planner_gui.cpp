@@ -130,7 +130,7 @@ std::pair<bool, boost::program_options::variables_map> processOptions(
       throw BH_EXCEPTION("Unable to open config file");
     }
     else {
-      const bool allow_unregistered = false;
+      const bool allow_unregistered = true;
       po::store(parse_config_file(config_in, config_file_options, allow_unregistered), vm);
       notify(vm);
     }
